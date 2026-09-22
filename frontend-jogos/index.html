@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <title>Catálogo de jogos</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>🎮Catálogo de jogos</h1>
+        <section class="filtros">
+            <h2>Filtrar jogos</h2>
+            <input type="text" id="filtro=genero" placeholder="Gênero">
+            <input type="text" id="filtro=Plataforma" placeholder="Plataforma">
+            <input type="text" id="filtro=notaMin" placeholder="Nota Mínima" step="0.1">
+            <button id="btn-filtrar">Buscar</button>
+            <button id="btn-filtrar">Limpar</button>
+        </section>
+        <section class="formulario">
+            <h2 id="titulo-form">Cadastrar jogo</h2>
+            <form id="form-jogo">
+                <input type="hidden" id="jogo-id">
+                <input type="text" id="titulo" placeholder="Titulo" required>
+                <input type="text" id="genero" placeholder="Gênero" required>
+                <input type="text" id="plataforma" placeholder="Plataforma" required>
+                <input type="number" id="ano" placeholder="Ano" required>
+                <input type="number" id="nota" placeholder="nota (opcional)" step="0.1">
+                <button type="submit">Salvar</button>
+                <button type="button" id="btn-cancelar">Cancelar</button>
+
+            </form>
+        </section>
+        <section class="lista">
+            <h2>Jogos Cadastrados</h2>
+            <table>
+                <thead>
+                    <th>Titulo</th><th>Gênero</th><th>Plataforma</th>
+                    <th>Ano</th><th>Nota</th><th>Ações</th>
+                </thead>
+                <tbody id="Lista-jogos">
+                </tbody>
+            </table>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
