@@ -7,6 +7,7 @@
     </head>
     <body>
         <h1>🎮Catálogo de Jogos</h1>
+        <div id="mensagem" class="mensagem oculta" role="status"></div>
         <section class="filtros">
             <h2>Filtrar Jogos</h2>
             <input type="text" id="filtro-genero" placeholder="Gênero">
@@ -17,14 +18,14 @@
         </section>
         <section class="formulario">
             <h2 id="titulo-form">Cadastrar Jogo</h2>
-            <form id="form-jogo">
+            <form id="form-jogo" novalidate>
                 <input type="hidden" id="jogo-id">
                 <input type="text" id="titulo" placeholder="Título" required>
                 <input type="text" id="genero" placeholder="Gênero" required>
                 <input type="text" id="plataforma" placeholder="Plataforma" required>
                 <input type="number" id="ano" placeholder="Ano" required>
                 <input type="number" id="nota" placeholder="Nota (opcional)" step="0.1">
-                <button type="submit">Salvar</button>
+                <button type="submit" id="btn-salvar">Salvar</button>
                 <button type="button" id="btn-cancelar">Cancelar</button>
 
             </form>

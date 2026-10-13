@@ -6,6 +6,21 @@ const tituloForm = document.getElementById('titulo-form');
 const listaJogos = document.getElementById('lista-jogos');
 const inputId = document.getElementById('jogo-id');
 const btnCancelar = document.getElementById('btn-cancelar');
+const btnSalvar = document.getElementById('btn-salvar');
+const areaMensagem = document.getElementById('mensagem');
+
+let temporizadorMensagem;
+
+function mostrarMensagem(texto, tipo='sucesso') {
+  areaMensagem.textContent = texto;
+  areaMensagem.className = `mensagem ${tipo}`;
+
+  clearTimeout(temporizadorMensagem);
+  const duracao = tipo === 'erro' ? 8000 : 4000;
+  temporizadorMensagem = setTimeout(() =>{
+    areaMensagem.className = 'mensagem oculta';
+  }, duracao);
+}
 
 async function carregarJogos(query = '') {
   const resposta = await fetch(`${API_URL}${query}`);
