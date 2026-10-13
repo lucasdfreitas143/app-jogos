@@ -1,38 +1,39 @@
 body{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgb(240, 241, 255)
+    background-color: #f9fafb;
 }
 
 h1{
-    color:black
-}
-input, button{
-    padding: 8px;
-    margin: 4px 4px 4px;
+    color: #1A3A5C
 }
 
-button{
-    background-color:blue;
-    color:bisque;
+input, button {
+    padding: 8px;
+    margin: 4px 4px 4px 0;
+}
+
+button {
+    background-color: #2563EB;
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-table{
+table {
     width: 100%;
     border-collapse: collapse;
 }
 
 th, td {
-    border: 1px solid skyblue;
+    border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
-th{
-    background-color: white;
+th {
+    background-color: #DBEAFE;
 }
